@@ -1,13 +1,11 @@
 /**
  * @file cash.c
- * @brief Optimal currency denomination calculator with descriptive breakdown (CS50 Cash)
- * * ARCHITECTURAL DESIGN:
- * - Computes the absolute minimum coin count required to render a specific value of change.
- * - Input Gate: Enforces non-negative boundaries via a do-while loop constraint (>= 0).
- * - Algorithmic Optimization: Utilizes sequential division and remainder reduction 
- * ($25\phi \rightarrow 10\phi \rightarrow 5\phi \rightarrow 1\phi$) to maintain flat, 
- * highly efficient O(1) computational complexity.
- * - Interface Layer: Outputs both the grand total and an itemized breakdown per denomination.
+ * @brief Calculates the minimum number of coins needed for change.
+ * * How it works:
+ * - Asks the user for the amount of change owed and ensures it is not negative.
+ * - Uses division to quickly find out how many quarters, dimes, and nickels 
+ * can fit into the total amount without needing slow subtraction loops.
+ * - Prints the final coin count along with a friendly breakdown of each coin used.
  */
 
 #include <cs50.h>
