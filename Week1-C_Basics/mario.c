@@ -1,11 +1,11 @@
 /**
  * @file mario.c
- * @brief Console-based structural rendering simulation (CS50 Mario Less)
- * * ARCHITECTURAL DESIGN:
- * - Generates a right-aligned pyramidal grid of a user-specified height.
- * - Enforces dynamic input validation using an iterative control loop constraint (>= 1).
- * - Implements a highly decoupled functional abstraction by passing local parameters 
- * (row counts and offsets) by value to user-defined rendering modules.
+ * @brief Prints a right-aligned Mario pyramid based on user input.
+ * * How it works:
+ * - Prompts the user for a pyramid height and ensures it is a positive integer.
+ * - Loops through each row to build the pyramid structure.
+ * - Passes the row data into clean, separate functions to handle printing 
+ * the spaces and the blocks independently.
  */
 
 #include <cs50.h>
